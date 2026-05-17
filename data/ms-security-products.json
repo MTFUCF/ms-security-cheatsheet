@@ -68,7 +68,7 @@
       ],
       "when_to_use": "Hybrid and multi-cloud organizations needing unified cloud security, infrastructure hardening, and compliance tracking.",
       "common_confusion": "Different from Defender for Endpoint: Cloud focuses on infrastructure misconfigs and cloud-native threats; Endpoint focuses on device-level threats.",
-      "source": "https://learn.microsoft.com/en-us/defender-cloud/"
+      "source": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction"
     },
     {
       "id": "defender-cloud-apps",
@@ -148,7 +148,7 @@
       ],
       "when_to_use": "Organizations seeking automated response to identity compromise without adding manual review overhead.",
       "common_confusion": "Part of Entra ID (requires Premium P2); distinct from Defender for Identity (which monitors on-prem AD).",
-      "source": "https://learn.microsoft.com/en-us/entra/identity-protection/"
+      "source": "https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection"
     },
     {
       "id": "entra-permissions-management",
@@ -292,7 +292,7 @@
       ],
       "when_to_use": "Organizations operating in EU/California/other jurisdictions with privacy regulations requiring automated fulfillment of data subject rights.",
       "common_confusion": "Different from Purview DLP/Information Protection; Priva is *reactive* (responds to subject requests) vs. Purview *proactive* (prevents exfiltration).",
-      "source": "https://learn.microsoft.com/en-us/priva/"
+      "source": "https://learn.microsoft.com/en-us/privacy/priva/priva-overview"
     },
     {
       "id": "intune",
