@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Printable Microsoft security product reference comparing Defender XDR, Sentinel, Entra, Purview, and related tools."
+    />
+    <title>Microsoft Security Cheat Sheet</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="src/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell header-row">
+        <div class="header-copy">
+          <p class="eyebrow">Matthew Faber · Microsoft Security</p>
+          <h1>Microsoft Security Cheat Sheet — Defender XDR vs. Sentinel vs. Entra vs. Purview</h1>
+          <p class="lede">
+            A static reference card site for understanding where Microsoft security products fit, when to use them,
+            and what they are commonly confused with.
+          </p>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
+          Theme
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" class="shell page-content">
+      <section class="hero-panel" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div>
+            <p class="section-kicker">Reference guide</p>
+            <h2 id="hero-title">What each Microsoft security product is actually for</h2>
+            <p>
+              This cheat sheet emphasizes information architecture over animation: quick task matching at the top,
+              category jump links in the middle, and printable product cards underneath.
+            </p>
+          </div>
+          <div class="hero-stats" aria-label="Quick stats">
+            <div class="stat-card">
+              <span class="stat-value">17</span>
+              <span class="stat-label">Products</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value">6</span>
+              <span class="stat-label">Categories</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value">1</span>
+              <span class="stat-label">Printable reference</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-reference-panel" aria-labelledby="quick-reference-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Top-level comparison</p>
+            <h2 id="quick-reference-title">Quick Reference — Which product for which job?</h2>
+          </div>
+          <p class="section-note">Use this first when somebody says, “Which Microsoft tool covers this?”</p>
+        </div>
+        <div id="quick-reference" class="table-wrap" aria-live="polite"></div>
+      </section>
+
+      <div class="content-grid">
+        <aside class="toc-panel" aria-labelledby="toc-title">
+          <div class="toc-inner">
+            <h2 id="toc-title">Jump to category</h2>
+            <nav id="toc-nav" class="toc-nav" aria-label="Product category navigation"></nav>
+          </div>
+        </aside>
+
+        <section class="catalog-panel" aria-labelledby="catalog-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Product map</p>
+              <h2 id="catalog-title">Grouped reference cards</h2>
+            </div>
+            <p class="section-note">
+              Cards are organized to help recruiters, peers, and interview panels quickly separate adjacent products.
+            </p>
+          </div>
+          <div id="category-sections" class="category-stack" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      Built by Matthew Faber ·
+      <a href="https://github.com/matthewfaber/ms-security-cheatsheet">source</a>
+    </footer>
+  </body>
+</html>

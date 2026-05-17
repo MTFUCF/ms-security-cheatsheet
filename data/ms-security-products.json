@@ -1,0 +1,314 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "date_created": "2026-05-16",
+    "description": "Microsoft security product reference guide",
+    "total_products": 17
+  },
+  "products": [
+    {
+      "id": "defender-xdr",
+      "name": "Microsoft Defender XDR",
+      "category": "SIEM/SOAR",
+      "one_line": "Extended Detection & Response platform that correlates signals across endpoints, cloud, identity, and email to detect and respond to threats automatically.",
+      "key_capabilities": [
+        "Multi-signal threat detection and correlation",
+        "Automated incident investigation and response",
+        "Attack chain visualization (incident graph)",
+        "Threat intelligence integration",
+        "Advanced hunting with KQL"
+      ],
+      "when_to_use": "Organizations with Microsoft 365 / Azure / hybrid infrastructure seeking unified threat visibility and automated response across all attack surfaces.",
+      "common_confusion": "Often confused with Sentinel (SIEM). Defender XDR focuses on curated, actionable incidents; Sentinel is a log aggregation + custom detection platform.",
+      "source": "https://learn.microsoft.com/en-us/defender-xdr/"
+    },
+    {
+      "id": "defender-endpoint",
+      "name": "Microsoft Defender for Endpoint",
+      "category": "Endpoint",
+      "one_line": "Endpoint Detection & Response (EDR) platform providing threat prevention, detection, investigation, and response for Windows, macOS, Linux, iOS, and Android.",
+      "key_capabilities": [
+        "Real-time threat prevention and EDR",
+        "Vulnerability management and patch prioritization",
+        "Behavioral threat blocking",
+        "Device investigation and isolation",
+        "Mobile device protection"
+      ],
+      "when_to_use": "Enterprises needing visibility into and control of endpoint devices, hunting for advanced threats, and managing vulnerabilities across heterogeneous OS environments.",
+      "common_confusion": "Not the same as Windows Defender (built-in antivirus). Defender for Endpoint is enterprise-grade EDR with cloud backend, analytics, and integration into Defender XDR.",
+      "source": "https://learn.microsoft.com/en-us/defender-endpoint/"
+    },
+    {
+      "id": "defender-office365",
+      "name": "Microsoft Defender for Office 365",
+      "category": "Email/Collab",
+      "one_line": "Email and collaboration threat protection detecting and blocking malware, phishing, and business email compromise in Exchange Online and Teams.",
+      "key_capabilities": [
+        "Safe Links (URL sandboxing)",
+        "Safe Attachments (file detonation)",
+        "Anti-phishing and business email compromise detection",
+        "Threat trackers and campaign view",
+        "Attack simulation training"
+      ],
+      "when_to_use": "Microsoft 365 customers requiring advanced email threat protection beyond Exchange Online's built-in capabilities.",
+      "common_confusion": "Exchange Online includes built-in antispam/antimalware; Defender for Office 365 P1/P2 add sandboxing, behavioral analysis, and phishing simulation.",
+      "source": "https://learn.microsoft.com/en-us/defender-office-365/"
+    },
+    {
+      "id": "defender-cloud",
+      "name": "Microsoft Defender for Cloud",
+      "category": "Cloud",
+      "one_line": "Cloud-native security posture management (CSPM) and cloud workload protection (CWPP) for Azure, AWS, GCP, and on-prem servers.",
+      "key_capabilities": [
+        "Security posture assessment and recommendations",
+        "Vulnerability scanning and patch management",
+        "Regulatory compliance monitoring (PCI, HIPAA, SOC 2)",
+        "Threat protection for VMs, containers, serverless",
+        "Multi-cloud support"
+      ],
+      "when_to_use": "Hybrid and multi-cloud organizations needing unified cloud security, infrastructure hardening, and compliance tracking.",
+      "common_confusion": "Different from Defender for Endpoint: Cloud focuses on infrastructure misconfigs and cloud-native threats; Endpoint focuses on device-level threats.",
+      "source": "https://learn.microsoft.com/en-us/defender-cloud/"
+    },
+    {
+      "id": "defender-cloud-apps",
+      "name": "Microsoft Defender for Cloud Apps",
+      "category": "Cloud",
+      "one_line": "Cloud Access Security Broker (CASB) detecting anomalies and preventing data exfiltration in SaaS and cloud applications.",
+      "key_capabilities": [
+        "Real-time user and entity behavior analytics",
+        "Anomaly detection (impossible travel, suspicious uploads)",
+        "Session controls (block, warn, force re-auth)",
+        "Sanctioned and unsanctioned app discovery",
+        "Data loss prevention integration"
+      ],
+      "when_to_use": "Organizations using SaaS (Office 365, Salesforce, Box, Slack) who need visibility and control over cloud app usage and insider threat detection.",
+      "common_confusion": "Works *on top of* cloud apps (sits between user and SaaS); not a replacement for app-native security settings.",
+      "source": "https://learn.microsoft.com/en-us/cloud-app-security/"
+    },
+    {
+      "id": "defender-identity",
+      "name": "Microsoft Defender for Identity",
+      "category": "Identity",
+      "one_line": "On-premises Active Directory threat detection and response identifying credential compromise, lateral movement, and advanced attacks.",
+      "key_capabilities": [
+        "AD traffic monitoring (Kerberos, NTLM, LDAP)",
+        "Lateral movement path analysis",
+        "Kerberoasting and password spray detection",
+        "User and entity behavior analytics (UEBA)",
+        "Integration with Defender XDR"
+      ],
+      "when_to_use": "Organizations with on-prem Active Directory who need to detect advanced attacks and suspicious user behavior in the identity layer.",
+      "common_confusion": "Works *with* Defender for Endpoint (device-focused); Defender for Identity focuses on AD traffic and identity-layer threats.",
+      "source": "https://learn.microsoft.com/en-us/defender-for-identity/"
+    },
+    {
+      "id": "sentinel",
+      "name": "Microsoft Sentinel",
+      "category": "SIEM/SOAR",
+      "one_line": "Cloud-native SIEM and SOAR platform ingesting logs from any source, detecting threats via rules and ML, and automating response through playbooks.",
+      "key_capabilities": [
+        "Log ingestion and aggregation (any source, on-prem or cloud)",
+        "Detection rules and ML anomaly detection",
+        "Incident investigation and correlation",
+        "Playbook automation (SOAR)",
+        "1000+ built-in connectors and workbooks"
+      ],
+      "when_to_use": "Organizations with non-Microsoft infrastructure, custom log sources, or high data volumes needing flexible SIEM without on-prem infrastructure.",
+      "common_confusion": "Defender XDR is more 'managed' (Microsoft curates high-fidelity incidents); Sentinel is more 'DIY' (customers build rules). Use Sentinel if you have diverse sources.",
+      "source": "https://learn.microsoft.com/en-us/azure/sentinel/"
+    },
+    {
+      "id": "entra-id",
+      "name": "Microsoft Entra ID",
+      "category": "Identity",
+      "one_line": "Cloud-based identity and access management (IAM) service managing user identities, app access, and authentication across cloud and on-prem resources.",
+      "key_capabilities": [
+        "User and device identity management",
+        "Multi-factor authentication (MFA)",
+        "Conditional Access policies",
+        "Single sign-on (SSO) to cloud and on-prem apps",
+        "Guest user B2B collaboration"
+      ],
+      "when_to_use": "Any organization using Microsoft 365 or Azure; the foundation for modern identity and Zero Trust security.",
+      "common_confusion": "Formerly 'Azure AD'; renamed to Entra ID in 2023. Entra = broader product family. Entra ID = core IAM service.",
+      "source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "id": "entra-id-protection",
+      "name": "Microsoft Entra ID Protection",
+      "category": "Identity",
+      "one_line": "Risk-based conditional access detecting compromised identities and risky sign-ins, automatically triggering MFA or blocking access.",
+      "key_capabilities": [
+        "Risky user and sign-in detection (ML-based)",
+        "Risk remediation workflows",
+        "MFA/password reset enforcement on risk",
+        "Leaked credential scanning",
+        "Impossible travel and anomalous location detection"
+      ],
+      "when_to_use": "Organizations seeking automated response to identity compromise without adding manual review overhead.",
+      "common_confusion": "Part of Entra ID (requires Premium P2); distinct from Defender for Identity (which monitors on-prem AD).",
+      "source": "https://learn.microsoft.com/en-us/entra/identity-protection/"
+    },
+    {
+      "id": "entra-permissions-management",
+      "name": "Microsoft Entra Permissions Management",
+      "category": "Identity",
+      "one_line": "Least-privilege access solution discovering, remediating, and monitoring overprivileged identities across AWS, Azure, and GCP.",
+      "key_capabilities": [
+        "Permissions discovery across multi-cloud",
+        "Least-privilege recommendations",
+        "Permissions remediation automation",
+        "Overprivileged account alerting",
+        "PIM (Privileged Identity Management) integration"
+      ],
+      "when_to_use": "Multi-cloud organizations needing to audit and trim standing permissions in cloud IAM (AWS IAM, Azure RBAC, GCP IAM).",
+      "common_confusion": "Not the same as PIM (which manages *temporary* privilege elevation). Permissions Management remediates *standing* overprivilege.",
+      "source": "https://learn.microsoft.com/en-us/entra/permissions-management/"
+    },
+    {
+      "id": "entra-verified-id",
+      "name": "Microsoft Entra Verified ID",
+      "category": "Identity",
+      "one_line": "Decentralized identity solution enabling users to present cryptographically-signed credentials without contacting the issuer on each verification.",
+      "key_capabilities": [
+        "Decentralized identifier (DID) issuance",
+        "Selective disclosure of attributes",
+        "Offline verification support",
+        "Integration with Entra ID",
+        "Privacy-preserving authentication"
+      ],
+      "when_to_use": "Organizations exploring decentralized identity and privacy-by-design authentication (early adoption, specialized use cases).",
+      "common_confusion": "Distinct from traditional OAuth/SAML; uses W3C standards for self-sovereign identity.",
+      "source": "https://learn.microsoft.com/en-us/entra/verified-id/"
+    },
+    {
+      "id": "purview-data-governance",
+      "name": "Microsoft Purview (Data Governance)",
+      "category": "Compliance",
+      "one_line": "Unified data governance platform discovering, cataloging, classifying, and managing data lineage across Microsoft and multi-cloud environments.",
+      "key_capabilities": [
+        "Automated data discovery and classification",
+        "Data asset catalogs and lineage mapping",
+        "Metadata management",
+        "Data quality monitoring",
+        "Multi-cloud support (Azure, AWS, GCP)"
+      ],
+      "when_to_use": "Data-driven organizations needing to understand data flows, classify sensitive assets, and maintain data dictionaries for compliance and analytics.",
+      "common_confusion": "Part of Purview umbrella; different from DLP and Information Protection (which enforce data protection policies).",
+      "source": "https://learn.microsoft.com/en-us/purview/purview"
+    },
+    {
+      "id": "purview-dlp",
+      "name": "Microsoft Purview (Data Loss Prevention)",
+      "category": "Compliance",
+      "one_line": "Policy-driven prevention of sensitive data exfiltration across email, Teams, SharePoint, OneDrive, and endpoints.",
+      "key_capabilities": [
+        "Content inspection and pattern matching",
+        "ML-based sensitive data detection",
+        "Policy enforcement (warn/block/audit)",
+        "Endpoint DLP integration with Defender for Endpoint",
+        "Incident reporting and remediation"
+      ],
+      "when_to_use": "Organizations handling PII, trade secrets, or regulated data (PHI, PCI, GDPR) who need to prevent accidental or intentional exfiltration.",
+      "common_confusion": "Data Loss *Prevention* (DLP) blocks sharing; Data Lifecycle Management deletes old data; both prevent incidents but differently.",
+      "source": "https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp"
+    },
+    {
+      "id": "purview-information-protection",
+      "name": "Microsoft Purview (Information Protection)",
+      "category": "Compliance",
+      "one_line": "Sensitivity labels and encryption protecting data through automatic classification, encryption, and access restrictions that travel with files.",
+      "key_capabilities": [
+        "Sensitivity label creation and application",
+        "Automatic label policies (rules-based)",
+        "Encryption and watermarking",
+        "Usage restrictions (forward, edit, print)",
+        "Integration with Office, Outlook, Teams, SharePoint"
+      ],
+      "when_to_use": "Organizations needing persistent data protection that survives sharing (label and encryption follow file outside organization).",
+      "common_confusion": "Differs from DLP: Information Protection *encrypts* and *marks* data; DLP *blocks* sharing. Often used together.",
+      "source": "https://learn.microsoft.com/en-us/purview/information-protection"
+    },
+    {
+      "id": "purview-insider-risk",
+      "name": "Microsoft Purview (Insider Risk Management)",
+      "category": "Compliance",
+      "one_line": "UEBA-powered detection of risky user behaviors (data exfiltration, unauthorized access, policy violations) with privacy-by-design and case management.",
+      "key_capabilities": [
+        "Behavioral risk templates (departing employees, data leaks, security policy violations)",
+        "Adaptive triggers and alerts",
+        "Case investigation and escalation",
+        "User coaching and remediation",
+        "HR and disciplinary integration"
+      ],
+      "when_to_use": "Organizations seeking to detect and prevent insider threats while balancing security with employee privacy.",
+      "common_confusion": "Different from Defender for Cloud Apps (which detects cloud app anomalies). Insider Risk focuses on user behavioral patterns across M365.",
+      "source": "https://learn.microsoft.com/en-us/purview/insider-risk-management"
+    },
+    {
+      "id": "purview-ediscovery",
+      "name": "Microsoft Purview (eDiscovery)",
+      "category": "Compliance",
+      "one_line": "Automated data collection, preservation, and discovery for litigation, investigations, and regulatory requests across Microsoft 365 and on-prem sources.",
+      "key_capabilities": [
+        "Custodian-based hold and collection",
+        "Keyword search and filtering",
+        "Legal hold enforcement",
+        "Relevance ranking (Premium tier)",
+        "Export for legal review"
+      ],
+      "when_to_use": "Legal, compliance, and investigation teams conducting e-discovery, litigation, or forensic investigations.",
+      "common_confusion": "eDiscovery is a capability within Purview; not a standalone tool. Premium eDiscovery adds ML-powered relevance ranking.",
+      "source": "https://learn.microsoft.com/en-us/purview/ediscovery"
+    },
+    {
+      "id": "purview-compliance-manager",
+      "name": "Microsoft Purview (Compliance Manager)",
+      "category": "Compliance",
+      "one_line": "Streamlined compliance management mapping Microsoft and customer controls to regulatory frameworks, tracking implementation, and providing audit readiness.",
+      "key_capabilities": [
+        "Pre-built assessment templates (GDPR, HIPAA, SOC 2, ISO 27001, etc.)",
+        "Control mapping and dependency tracking",
+        "Compliance score and improvement actions",
+        "Integration with Purview tools",
+        "Exportable compliance reports"
+      ],
+      "when_to_use": "Compliance officers and audit teams needing to manage multi-framework compliance, track control status, and prepare for audits.",
+      "common_confusion": "Not the same as Compliance Insights (cloud app compliance); Compliance Manager is a framework-driven control tracker.",
+      "source": "https://learn.microsoft.com/en-us/purview/compliance-manager"
+    },
+    {
+      "id": "priva",
+      "name": "Microsoft Priva",
+      "category": "Compliance",
+      "one_line": "Privacy automation solution enabling organizations to fulfill subject rights requests (data access, deletion) and conduct privacy assessments under GDPR/CCPA.",
+      "key_capabilities": [
+        "Subject rights request (DSR) automation",
+        "Personal data discovery and collection",
+        "Privacy risk assessment",
+        "Data minimization recommendations",
+        "Multi-jurisdiction support (GDPR, CCPA, etc.)"
+      ],
+      "when_to_use": "Organizations operating in EU/California/other jurisdictions with privacy regulations requiring automated fulfillment of data subject rights.",
+      "common_confusion": "Different from Purview DLP/Information Protection; Priva is *reactive* (responds to subject requests) vs. Purview *proactive* (prevents exfiltration).",
+      "source": "https://learn.microsoft.com/en-us/priva/"
+    },
+    {
+      "id": "intune",
+      "name": "Microsoft Intune",
+      "category": "Endpoint",
+      "one_line": "Cloud-based mobile device management (MDM) and application management (MAM) for Windows, macOS, iOS, Android, and Linux.",
+      "key_capabilities": [
+        "Device enrollment and compliance policies",
+        "Mobile app management (MAM) for app-level data protection",
+        "Conditional Access integration",
+        "Remote device management and wipe",
+        "App distribution and configuration"
+      ],
+      "when_to_use": "Organizations managing heterogeneous devices, requiring BYOD support, or needing app-level data protection on personal devices.",
+      "common_confusion": "MDM (device-level controls) vs. MAM (app-level controls). Intune supports both; MAM protects corp data even on unmanaged personal devices.",
+      "source": "https://learn.microsoft.com/en-us/mem/intune/"
+    }
+  ]
+}
