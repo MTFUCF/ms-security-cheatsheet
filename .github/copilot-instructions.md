@@ -2,7 +2,7 @@
 
 Microsoft Security Products Cheat Sheet is a focused cybersecurity portfolio project owned by Matthew Faber. The goal is straightforward: A static reference site that clarifies Microsoft security product positioning, common confusion points, and practical one-line explanations in a format that is easy to skim and easy to host. Deployment target is GitHub Pages. The stack is HTML5, CSS3, Vanilla JavaScript, GitHub Pages. Keep the repo easy to review, easy to explain in an interview, and easy to deploy from a clean branch.
 
-When helping here, bias toward the smallest useful implementation. Preserve the deliberate no-build-step approach for the frontend. If the project uses Azure Functions, keep Node tooling isolated to `api/` and do not introduce root-level package management. Prefer plain HTML, CSS, and vanilla JavaScript that a recruiter can understand quickly by opening the repo.
+When helping here, bias toward the smallest useful implementation. Preserve the deliberate no-build-step approach for the frontend. If the project uses Azure Functions, keep Node tooling isolated to `api/` and do not introduce root-level package management. Prefer plain HTML, CSS, and vanilla JavaScript that reads clearly.
 
 What Copilot should help with:
 - Tighten the information architecture so a reader can scan product categories in seconds.

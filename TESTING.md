@@ -21,7 +21,7 @@ Baseline date: **2026-05-16**
 - [ ] Future filters and product cards can fit into the planned layout without breaking readability.
 - [ ] Copilot instructions explicitly warn against muddying distinct Microsoft security products.
 - [ ] Placeholder copy reads like a reference document, not a brochure.
-- [ ] The project still feels complete enough for a recruiter to understand the intended outcome.
+- [ ] The project still feels complete enough to understand the intended outcome.
 
 ## P2 — polish and follow-up checks
 - [ ] A fresh screenshot can eventually be dropped into `docs/screenshot.png` without changing the README contract.
